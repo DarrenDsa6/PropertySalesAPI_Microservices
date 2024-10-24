@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserAPI", "UserAPI\UserAPI.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionAPI", "TransactionAPI\TransactionAPI.csproj", "{61153AD1-A8A9-4CAA-9F10-A821ACA48A8D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropSalesAPI", "..\..\merge\PropSalesAPI.csproj", "{A81CFB7F-4A50-4906-A3D4-00A90BEEF5E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropSalesAPI", "PropSalesAPI\PropSalesAPI.csproj", "{A81CFB7F-4A50-4906-A3D4-00A90BEEF5E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerTest", "BrokerTest\BrokerTest.csproj", "{AD3A7A47-7203-499F-B5DF-2C365C3EF038}"
 EndProject

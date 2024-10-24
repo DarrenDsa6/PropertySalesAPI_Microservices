@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using PropSalesAPI.Data;
+using PropertySales.Data;
+using PropertySales.Models.Domain;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,8 +14,8 @@ using System.Threading.Tasks;
 [ApiController]
 public class PropertyController : ControllerBase
 {
-    private readonly PropertySalesDbContext _context; // Replace with your actual DbContext
 
+    private readonly PropertySalesDbContext _context; // Replace with your actual DbContext
     private readonly string _storagePath;
     private readonly string _imageBasePath;
 
@@ -23,9 +24,12 @@ public class PropertyController : ControllerBase
         _context = context;
         // Combine the project directory with the Uploads folder
         var uploadsFolder = configuration["ImageStorage:Path"];
-        _storagePath = Path.Combine(Directory.GetCurrentDirectory(), uploadsFolder);
 
         _imageBasePath = configuration["ImageStorage:Path"];
+
+
+        _storagePath = Path.Combine(Directory.GetCurrentDirectory(), uploadsFolder);
+
         // Ensure the directory exists
         if (!Directory.Exists(_storagePath))
         {
@@ -88,11 +92,19 @@ public class PropertyController : ControllerBase
             .Include(p => p.PropertyImages) // Include images if needed
             .ToListAsync();
 
+        foreach (var property in properties)
+        {
+            foreach (var image in property.PropertyImages)
+            {
+                image.FilePath = image.FilePath
+                    .Replace(Path.Combine(Directory.GetCurrentDirectory(), _imageBasePath) + "\\", "/Uploads/");
+            }
+        }
         return Ok(properties);
     }
 
-    [HttpPatch("{id}")]
-    public async Task<IActionResult> UpdatePropertyPartial(int id, [FromBody] PropertyPatchDto request)
+        [HttpPatch("{id}")]
+    public async Task<IActionResult> UpdatePropertyPartial(int id, [FromForm] PropertyPatchDto request)
     {
         // Fetch the existing property from your data source
         var existingProperty = await _context.Properties
@@ -182,7 +194,6 @@ public class PropertyController : ControllerBase
         return Ok(property);
     }
 
-
     [HttpGet("{id}")]
     public async Task<IActionResult> GetPropertiesByUserId(int id)
     {
@@ -205,6 +216,8 @@ public class PropertyController : ControllerBase
                     .Replace(Path.Combine(Directory.GetCurrentDirectory(), _imageBasePath) + "\\", "/Uploads/");
             }
         }
+
         return Ok(properties);
     }
+
 }

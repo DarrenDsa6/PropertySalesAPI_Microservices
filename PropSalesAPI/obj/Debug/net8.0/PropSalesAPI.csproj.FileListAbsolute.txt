@@ -1,0 +1,7 @@
+C:\Users\dards\Desktop\LastApiProject\PropertySales_API\PropSalesAPI\obj\Debug\net8.0\PropSalesAPI.csproj.AssemblyReference.cache
+C:\Users\dards\Desktop\LastApiProject\PropertySales_API\PropSalesAPI\obj\Debug\net8.0\PropSalesAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dards\Desktop\LastApiProject\PropertySales_API\PropSalesAPI\obj\Debug\net8.0\PropSalesAPI.AssemblyInfoInputs.cache
+C:\Users\dards\Desktop\LastApiProject\PropertySales_API\PropSalesAPI\obj\Debug\net8.0\PropSalesAPI.AssemblyInfo.cs
+C:\Users\dards\Desktop\LastApiProject\PropertySales_API\PropSalesAPI\obj\Debug\net8.0\PropSalesAPI.csproj.CoreCompileInputs.cache
+C:\Users\dards\Desktop\LastApiProject\PropertySales_API\PropSalesAPI\obj\Debug\net8.0\PropSalesAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\dards\Desktop\LastApiProject\PropertySales_API\PropSalesAPI\obj\Debug\net8.0\PropSalesAPI.MvcApplicationPartsAssemblyInfo.cache

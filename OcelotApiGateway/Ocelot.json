@@ -1,0 +1,333 @@
+{
+    "Routes": [
+        {
+            // Route for retrieving a specific user by ID
+            "DownstreamPathTemplate": "/api/users/{id:int}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002 // Port where your UserAPI is running
+                }
+            ],
+            "UpstreamPathTemplate": "/api/users/{id:int}",
+            "UpstreamHttpMethod": [ "GET" ] // Accepts GET requests
+        },
+        {
+            // Route for retrieving all users
+            "DownstreamPathTemplate": "/api/users",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/users",
+            "UpstreamHttpMethod": [ "GET" ] // Accepts GET requests
+        },
+        {
+            // Route for creating a new user
+            "DownstreamPathTemplate": "/api/users",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/users",
+            "UpstreamHttpMethod": [ "POST" ] // Accepts POST requests
+        },
+        {
+            // Route for updating an existing user
+            "DownstreamPathTemplate": "/api/users",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/users",
+            "UpstreamHttpMethod": [ "PUT" ] // Accepts PUT requests
+        },
+        {
+            // Route for deleting a user by ID
+            "DownstreamPathTemplate": "/api/users/{id:int}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/users/{id:int}",
+            "UpstreamHttpMethod": [ "DELETE" ] // Accepts DELETE requests
+        },
+        {
+            // Route for user login
+            "DownstreamPathTemplate": "/api/users/login",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/users/login",
+            "UpstreamHttpMethod": [ "POST" ] // Accepts POST requests
+        },
+        {
+            // Route for Aadhaar verification
+            "DownstreamPathTemplate": "/api/users/aadhaar",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/users/aadhaar",
+            "UpstreamHttpMethod": [ "POST" ] // Accepts POST requests
+        },
+        {
+            // Route for retrieving all brokers
+            "DownstreamPathTemplate": "/api/brokers",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001 // Port where BrokerAPI is running
+                }
+            ],
+            "UpstreamPathTemplate": "/api/brokers",
+            "UpstreamHttpMethod": [ "GET" ] // Accepts GET requests
+        },
+        {
+            // Route for retrieving a specific broker by ID
+            "DownstreamPathTemplate": "/api/brokers/{id:int}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/brokers/{id:int}",
+            "UpstreamHttpMethod": [ "GET" ] // Accepts GET requests
+        },
+        {
+            // Route for creating a new broker
+            "DownstreamPathTemplate": "/api/brokers",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/brokers",
+            "UpstreamHttpMethod": [ "POST" ] // Accepts POST requests
+        },
+        {
+            // Route for updating an existing broker
+            "DownstreamPathTemplate": "/api/brokers/{id:int}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/brokers/{id:int}",
+            "UpstreamHttpMethod": [ "PUT" ] // Accepts PUT requests
+        },
+        {
+            // Route for deleting a broker by ID
+            "DownstreamPathTemplate": "/api/brokers/{id:int}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/brokers/{id:int}",
+            "UpstreamHttpMethod": [ "DELETE" ] // Accepts DELETE requests
+        },
+        {
+            // Route for broker login
+            "DownstreamPathTemplate": "/api/brokers/login",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/brokers/login",
+            "UpstreamHttpMethod": [ "POST" ] // Accepts POST requests
+        },
+        {
+            // Route for creating a new transaction
+            "DownstreamPathTemplate": "/api/transactions",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003 // Port where TransactionAPI is running
+                }
+            ],
+            "UpstreamPathTemplate": "/api/transactions",
+            "UpstreamHttpMethod": [ "POST" ] // Accepts POST requests
+        },
+        {
+            // Route for retrieving all transactions
+            "DownstreamPathTemplate": "/api/transactions",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/api/transactions",
+            "UpstreamHttpMethod": [ "GET" ] // Accepts GET requests
+        },
+        {
+            // Route for retrieving a specific transaction by ID
+            "DownstreamPathTemplate": "/api/transactions/{id:int}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/api/transactions/{id:int}",
+            "UpstreamHttpMethod": [ "GET" ] // Accepts GET requests
+        },
+        {
+            // Route for retrieving transactions by broker ID
+            "DownstreamPathTemplate": "/api/transactions/broker/{brokerId:int}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/api/transactions/broker/{brokerId:int}",
+            "UpstreamHttpMethod": [ "GET" ] // Accepts GET requests
+        },
+        {
+            // Route for retrieving transactions by buyer ID
+            "DownstreamPathTemplate": "/api/transactions/buyer/{buyerId:int}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/api/transactions/buyer/{buyerId:int}",
+            "UpstreamHttpMethod": [ "GET" ] // Accepts GET requests
+        },
+        {
+            // Route for partially updating a transaction by ID
+            "DownstreamPathTemplate": "/api/transactions/{id:int}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/api/transactions/{id:int}",
+            "UpstreamHttpMethod": [ "PATCH" ] // Accepts PATCH requests
+        },
+        {
+            // Route for adding a new property
+            "DownstreamPathTemplate": "/api/property/add",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5004 // Change to your Properties API port
+                }
+            ],
+            "UpstreamPathTemplate": "/api/property/add",
+            "UpstreamHttpMethod": [ "POST" ] // Accepts POST requests
+        },
+        {
+            // Route for retrieving all properties
+            "DownstreamPathTemplate": "/api/property/all",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5004 // Change to your Properties API port
+                }
+            ],
+            "UpstreamPathTemplate": "/api/property/all",
+            "UpstreamHttpMethod": [ "GET" ] // Accepts GET requests
+        },
+        {
+            // Route for retrieving a specific property by ID
+            "DownstreamPathTemplate": "/api/property/{id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5004 // Change to your Properties API port
+                }
+            ],
+            "UpstreamPathTemplate": "/api/property/{id}",
+            "UpstreamHttpMethod": [ "GET" ] // Accepts GET requests
+        },
+        {
+            // Route for deleting a specific property by ID
+            "DownstreamPathTemplate": "/api/property/{id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5004 // Change to your Properties API port
+                }
+            ],
+            "UpstreamPathTemplate": "/api/property/{id}",
+            "UpstreamHttpMethod": [ "DELETE" ] // Accepts DELETE requests
+        },
+        {
+            // Route for partially updating a specific property by ID
+            "DownstreamPathTemplate": "/api/property/{id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5004 // Change to your Properties API port
+                }
+            ],
+            "UpstreamPathTemplate": "/api/property/{id}",
+            "UpstreamHttpMethod": [ "PATCH" ] // Accepts PATCH requests
+        },
+        {
+            // Route for retrieving properties associated with a specific user
+            "DownstreamPathTemplate": "/api/property/{id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5004 // Change to your Properties API port
+                }
+            ],
+            "UpstreamPathTemplate": "/api/property/user/{id}",
+            "UpstreamHttpMethod": [ "GET" ] // Accepts GET requests
+        }
+    ],
+    // Global configuration for the Ocelot API Gateway
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:5010" // Replace with the port your Ocelot API Gateway will run on
+    }
+}
